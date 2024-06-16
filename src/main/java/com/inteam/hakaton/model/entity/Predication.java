@@ -26,5 +26,10 @@ public class Predication {
     private Double square;
     @Column(name = "n_flats")
     private Double numberFlats;
+    private String material;
+    private String assignmentStructure;
+    private Double distanceToMoscowCenter;
+    private Double tempMeanDay;
+    private String weather;
 
 }

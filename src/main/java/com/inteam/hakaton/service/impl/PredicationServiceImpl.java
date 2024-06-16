@@ -1,6 +1,8 @@
 package com.inteam.hakaton.service.impl;
 
+import com.inteam.hakaton.client.PredicationClient;
 import com.inteam.hakaton.mapper.PredicationMapper;
+import com.inteam.hakaton.model.dto.AddressDto;
 import com.inteam.hakaton.model.dto.PredicationDto;
 import com.inteam.hakaton.model.entity.Predication;
 import com.inteam.hakaton.repository.PredicationRepository;
@@ -17,6 +19,7 @@ import java.util.List;
 public class PredicationServiceImpl implements PredicationService {
     private final PredicationRepository predicationRepository;
     private final PredicationMapper predicationMapper;
+    private final PredicationClient predicationClient;
     @Override
     public void saveAll(List<PredicationDto> predications) {
         List<Predication> predicationList = predicationMapper.convertToEntity(predications);
@@ -26,5 +29,10 @@ public class PredicationServiceImpl implements PredicationService {
     @Override
     public List<Predication> findAll() {
         return predicationRepository.findAll();
+    }
+
+    @Override
+    public List<PredicationDto> getByDatePredict(String date) {
+        return predicationClient.getPredication(date);
     }
 }

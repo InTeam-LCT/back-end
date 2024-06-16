@@ -126,4 +126,20 @@ public class AddressServiceImpl implements AddressService {
         }
         return addressDtos;
     }
+
+    @Override
+    public List<AddressDto> getAddressesByPredication(List<PredicationDto> predicationDto) {
+        List<AddressDto> addressDtos = new ArrayList<>();
+
+        for (PredicationDto predication : predicationDto ) {
+            if (predication.prediction() != null && predication.prediction() > 0) {
+                Optional<Address> address = addressRepository.findByUnom(predication.unom());
+                address.ifPresent(add -> {
+                    AddressDto addressDto = addressMapper.convertToDto(add, predication);
+                    addressDtos.add(addressDto);
+                });
+            }
+        }
+        return addressDtos;
+    }
 }

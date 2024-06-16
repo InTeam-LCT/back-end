@@ -39,3 +39,15 @@ spring:
       order_inserts: true
       order_updates: true
       batch_versioned_data: true
+
+feign:
+  client:
+    config:
+      default:
+        readTimeout: 3600000
+        connectTimeout: 3600000
+
+
+predication:
+  url: ${DB_HOST_ML:localhost}:${DB_PORT_ML:5000}
+

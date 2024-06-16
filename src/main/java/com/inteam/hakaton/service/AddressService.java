@@ -1,6 +1,7 @@
 package com.inteam.hakaton.service;
 
 import com.inteam.hakaton.model.dto.AddressDto;
+import com.inteam.hakaton.model.dto.PredicationDto;
 import com.inteam.hakaton.model.entity.Address;
 
 import java.util.List;
@@ -24,4 +25,5 @@ public interface AddressService {
 
     List<AddressDto> getByDistrict(String district);
     List<AddressDto> getAddressesByPredication();
+    public List<AddressDto> getAddressesByPredication(List<PredicationDto> predicationDto);
 }

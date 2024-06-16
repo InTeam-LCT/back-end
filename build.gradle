@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'ru.inteam'
-version = '0.3.0-beta'
+version = '0.4.8'
 
 java {
     sourceCompatibility = '17'
@@ -24,6 +24,8 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.1.2'
+
     implementation 'org.apache.poi:poi-ooxml:4.1.2'
     implementation 'org.apache.poi:poi:4.1.2'
     implementation 'com.monitorjbl:xlsx-streamer:2.2.0'

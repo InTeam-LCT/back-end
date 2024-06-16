@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  front-end:
+    image: 'reirra/frontend:latest'
+    container_name: 'front'
+    ports:
+      - "80:80"
+    environment:
+      - 'VITE_APP_API_URL=http://localhost'
+      - 'VITE_APP_API_PORT=8080'
+      - 'VITE_APP_YMAPS_API_KEY=971a8654-a315-4688-a0fd-ce0e523ec10f'
+
+  back-end:
+    image: 'morrrun/back-betta:0.4.8'
+    container_name: 'back-api'
+    ports:
+      - "8080:8080"
+    environment:
+      - 'DB_HOST=10.0.95.31'
+      - 'DB_PORT=5432'
+      - 'DB_USER=postgres'
+      - 'DB_PASS=postgres'
+      - 'DB_HOST_ML=ml-service'
+      - 'DB_PORT_ML=5000'
+
+  ml-service:
+    image: 'morrrun/incident_predictor:latest'
+    container_name: 'ml-service'
+    ports:
+      - "5000:5000"
+    depends_on:
+      - back-end
+    environment:
+      - 'BACKEND_URL=http://10.0.95.31'
+      - 'BACKEND_PORT=8080'
+      - 'BD_HOST=10.0.95.31'
+      - 'BD_PORT=5432'
+      - 'BD_USER=postgres'
+      - 'BD_PASS=postgres'
+
+          -e DB_HOST=10.131.0.12 -e DB_PASS=6fg99sd6cx9m3
