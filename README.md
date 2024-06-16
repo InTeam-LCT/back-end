@@ -8,4 +8,16 @@
 
 Данный сервис взаимодействует с БД на PostrgeSQL, которая содержит данные таблицы:
 
-![](photo%2F%D1%ED%E8%EC%EE%EA%20%FD%EA%F0%E0%ED%E0%202024-06-16%20221213.png)
+![](photo%2Fdfgnjgfndgnfd.png)
+
+![](photo%2Ffghjgfhjd.png)
+
+![](photo%2Ffhgdjtyfgjyd.png)
+
+![](photo%2Fgfhkkgfhghkj.png)
+
+![](photo%2Fghftyh.png)
+
+![](photo%2Fghjkjghgkh.png)
+
+![](photo%2Fghmhgjkf%2Cl.png)
