@@ -8,4 +8,4 @@
 
 Данный сервис взаимодействует с БД на PostrgeSQL, которая содержит данные таблицы:
 
-![](photo/dfgnjgfndgnfd.png)
+![](photo%2F%D1%ED%E8%EC%EE%EA%20%FD%EA%F0%E0%ED%E0%202024-06-16%20221213.png)
